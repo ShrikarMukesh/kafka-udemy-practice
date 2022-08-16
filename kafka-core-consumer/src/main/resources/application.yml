@@ -6,7 +6,7 @@ spring:
     banner-mode: OFF
   kafka:
     consumer:
-      group-id: twitter-consumer-group
-      auto-offset-reset: earliest
+      group-id: employee-consumer-group
+      auto-offset-reset: latest
   jackson:
     date-format: yyyy-MMM-dd

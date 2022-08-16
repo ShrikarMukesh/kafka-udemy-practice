@@ -8,18 +8,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 import java.time.LocalDate;
 
 @SpringBootApplication
-//@EnableScheduling
+@EnableScheduling
 public class KafkaCoreProducerApplication  implements CommandLineRunner {
 
 //	@Autowired
 //	private KafkaKeyProducer keyProducer;
 
-	@Autowired
-	private EmployeeJsonProducer2 employeeJsonProducer;
+//	@Autowired
+//	private EmployeeJsonProducer2 employeeJsonProducer;
 
 
 	public static void main(String[] args) {
@@ -28,11 +29,16 @@ public class KafkaCoreProducerApplication  implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-       for(int i = 135; i< 145;i++){
-		   var emp = new Employee("emp - " + i , "Employee " + i , LocalDate.now());
-		   employeeJsonProducer.sendMessage(emp);
-	   }
+
 	}
+
+//	@Override
+//	public void run(String... args) throws Exception {
+//       for(int i = 135; i< 145;i++){
+//		   var emp = new Employee("emp - " + i , "Employee " + i , LocalDate.now());
+//		   employeeJsonProducer.sendMessage(emp);
+//	   }
+//	}
 
 //	@Override
 //	public void run(String... args) throws Exception {
