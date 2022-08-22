@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
 import com.course.kafka.producer.CommodityProducer;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
-@Service
+//@Service
 public class CommodityScheduler {
 
 	private final RestTemplate restTemplate = new RestTemplate();

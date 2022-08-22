@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Service;
 
-@Service
+//@Service
 public class CommodityDashboardConsumer {
 
 	private static final Logger LOG = LoggerFactory.getLogger(CommodityDashboardConsumer.class);
