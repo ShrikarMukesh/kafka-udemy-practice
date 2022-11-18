@@ -31,3 +31,8 @@ The docker-compose start command is useful only to restart containers that were 
 
 The docker-compose run command is for running “one-off” or “adhoc” tasks.
           
+docker exec -it kafka bash
+
+kafka-topics.sh --bootstrap-server localhost:9092 --list
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --from-beginning --topic t-commodity-order
