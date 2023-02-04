@@ -1,7 +1,6 @@
 package com.course.kafka.command.action;
 
 import java.time.LocalDateTime;
-import java.util.stream.Collectors;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +35,7 @@ public class OrderAction {
 		result.setOrderDateTime(LocalDateTime.now());
 		result.setOrderNumber(RandomStringUtils.randomAlphanumeric(8).toUpperCase());
 
-		var items = request.getItems().stream().map(this::convertToOrderItem).collect(Collectors.toList());
+		var items = request.getItems().stream().map(this::convertToOrderItem).toList();
 		items.forEach(item -> item.setOrder(result));
 		
 		result.setItems(items);

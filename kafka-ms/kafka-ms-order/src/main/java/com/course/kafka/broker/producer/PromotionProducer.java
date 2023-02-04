@@ -23,7 +23,8 @@ public class PromotionProducer {
 			var sendResult = kafkaTemplate.send("t-commodity-promotion", message).get();
 			LOG.info("Send result success for message {}", sendResult.getProducerRecord().value());
 		} catch (InterruptedException | ExecutionException e) {
-			LOG.error("Error publishing {}, because {}", message, e.getMessage());
+
+			LOG.error( "Error publishing {}, because {}", message, e.getMessage());
 		}
 	}
 
