@@ -7,6 +7,8 @@ kafka-topics.sh --bootstrap-server localhost:9092 --list
 
 kafka-topics.sh --bootstrap-server localhost:9092 --topic budjet2023 --create
 
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --from-beginning --topic t-commodity-promotion
+
 kafka-producer
 
 kafka-console-consumer.sh --bootstrap-server localhost:9092 --from-beginning --topic t-commodity-order
